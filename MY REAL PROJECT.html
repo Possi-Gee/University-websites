@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	<title>UNIVERSITY WEBSITE</title>
+	<link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+	<style>
+		
+		{
+			margin: 0;
+			padding: 0;
+			.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+		}
+		.header{
+			min-height: 100vh;
+			width: 100%;
+			background-image:linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(IMG-20240901-WA0027.jpg);
+			background-position: center;
+			background-size: cover;
+			position:relative ;
+
+
+		}
+		nav{
+			display: flex;
+			padding: 2% 6%;
+			justify-content: space-betweem;
+			align-items: center;
+		}
+	.nav-links{
+		width: 150px;
+	}
+	.nav-links{
+		flex: 1;
+		text-align: right;
+
+	}
+	.nav-links ul li{
+		list-style: none;
+		display: inline-block;
+		padding: 8px 12px;
+		position: relative;
+
+
+}
+
+	.nav-links ul li a{
+		color: white;
+		text-decoration: none;
+		font-size: 13px;
+	}
+	.nav-links ul li::after{
+		content: '';
+		width: 0%;
+		height: 2px;
+		background: red;
+		display: block;
+		margin: auto;
+		transition: 0.5s;
+	}
+	.nav-links ul li:hover::after{
+		width: 100%;
+	}
+	.text-box{
+		width: 90%;
+		color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		text-align: center;
+	}
+	.text-box h1{
+		font-size: 30px;
+	}
+	.text-box p{
+		margin:10px 0 40px;
+		font-size: 14px;
+		color: white;
+	}
+    .hero-btn{
+    	display: inline-block;
+    	text-decoration: none;
+    	color: white;
+    	border: 1px solid white;
+    	padding: 12px 34px;
+    	font-size: 13px;
+    	background: transparent;
+    	position: relative;
+    	cursor: pointer;
+    }
+    .hero-btn:hover{
+    	border: 1px solid red;
+    	background:red ;
+    	transition: 1s;
+    }
+    nav.fa{
+    	display: none;
+    }
+
+    @media(max-width:700px){
+    	.text-box h1{
+    		font-size: 20px;
+    	}
+
+    	.nav-links ul li{
+    		display: block;
+    	}
+    	.nav-links{
+    		position: absolute;
+    		background:red ;
+    		height: 100vh;
+    		width: -200px;
+    		top: 0;
+    		right: 0;
+    		text-align: left;
+    		z-index: 2;
+    		transition: 1s;
+
+    	}
+    	nav.fa{
+    		display: block;
+    		color: white;
+    		margin: 10px;
+    		font-size: 22px;
+    		cursor: pointer;
+    	}
+    }
+    /*------course-----*/
+    .course{
+    	width: 80%;
+    	margin: auto;
+    	text-align: center;
+    	padding-top: 100px;
+
+
+    }
+    .h1{
+    	font-size: 36px;
+    	font-weight: 600;
+    	color: black;
+    	font-size: 14px;
+    	font-weight: 300;
+    	line-height: 22px;
+    	padding: 10px;
+    }
+    .row{
+    	margin-top: 5%;
+    	display: flex;
+    	justify-content: space-between;
+    }
+    .course-col{
+    	flex-basis: 31%;
+    	background: #fff3f3;
+    	border-radius: 10px;
+    	margin-bottom: 5%;
+    	padding: 20px 12px;
+    	box-sizing: border-box;
+    }
+    .h3{
+    	text-align: center;
+    	font-weight: 600;
+    	margin: 10px 0;
+    }
+    .course-col:hover{
+    	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    @media(max-width700px);{
+    	.row{
+    		flex-direction: column;
+    	}
+
+    }
+    /*----campus------*/
+    .campus{
+    	width: 80%;
+    	margin: auto;
+    	text-align: center;
+    	padding-top: 50px;
+    
+    }
+   .campus-col{
+   	flex-basis: 32%;
+   	border-radius:10px ;
+   	margin-bottom: 30px;
+   	position: relative;
+   	overflow: hidden;
+   }
+   .campus-col img{
+    width: 100%;
+    display:block;
+   }
+   .layer{
+   	background:transparent;
+   	height: 100%;
+   	width: 100%;
+   	position: absolute;
+   	top: 0;
+   	left: 0;
+   	transition: 0.5s;
+
+   }
+   .layer:hover{
+   	background: rgba(226, 0, 0, 0.7);
+   }
+   .layer h3{
+   	width: 100%;
+   	font-weight: 500;
+   	color: white;
+   	font-size: 26px;
+   	bottom: 0;
+   	left: 50%;
+   	transform: translatex(-50%);
+   	position: absolute;
+   	opacity: 0;
+   	transition: 0,5s;
+   }
+   .layer:hover h3{
+   	bottom: 49%;
+   	opacity: 1;
+   }
+   /*--------facilities------*/
+
+.facilities{
+	width: 80%;
+	margin:auto ;
+	text-align: center;
+	padding-top: 100px;
+
+}
+
+.facilities-col{
+flex-basis: 31%;
+border-radius: 10px;
+margin-bottom: 5%;
+text-align: left;
+
+}
+.facilities-col img{
+	width: 80%;
+	border-radius: 10px;
+}
+
+}
+.facilities-col h3{
+	margin-top: 16px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+/*-------testimonials------*/
+
+.testimonials{
+	width: 80%;
+	margin:auto ;
+	padding-top: 100px;
+	text-align: center;
+}
+
+.testimonial-col{
+	flex-basis: 44%;
+	border-radius: 10px;
+	margin-bottom: 5;
+	text-align: left;
+	background: #fff3f3;
+	padding: 25px;
+	cursor: pointer;
+	display: flex;
+}
+.testimonial-col img{
+	height: 40px;
+	margin-left: 5px;
+	margin-right: 30px;
+	border-radius: 50%;
+}
+.testimonial-col p{
+	padding: 0;
+
+}
+.testimonial-col h3{
+
+margin-top: 15px;
+text-align: left;
+}
+/*----Call To Action-----*/
+
+.cta{
+	margin:100px auto ;
+	width: 80%;
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(IMG-20240901-WA0020.jpg);
+
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+}
+ .cta h1{
+   	color:white;
+   	margin-bottom: 40px;
+   	padding: 0;
+
+   }
+   /*-------footer-----*/
+   .footer{
+  
+   	text-align: center;
+   	padding: 30px 0;
+   
+   }
+   .footer h4{
+   	margin-bottom: 25px;
+   	margin-top: 20px;
+   	font-weight: 600;
+   }
+
+
+	</style>
+</head>
+<body>
+	<section class="header">
+		<nav>
+			<a href="PROJECT WORK.html">
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+
+				<ul>
+					<li><a href="MY REAL PROJECT.html">HOME</a></li>
+					<li><a href="About us.html">ABOUT</a></li>
+					<li><a href="course.html">COURSE</a></li>
+					<li><a href="blog.html">BLOG</a></li>
+					<li><a href="content.html">CONTACT</a></li>
+
+
+
+				</ul>
+			</div>
+			<i class="fa fa-bars"onclick="showMenu()" ></i>
+
+		
+		</nav>
+
+		<div class="text-box">
+			<h1>GHANA COMMUNICATION TECHNOLOGY UNIVERSITY</h1>
+			<p>KNOWLEDGE COMES FROM LEARNING</p>
+			<p>Here we make learning easy and Fun.Here you just need to learn <br>HTML,CSS, JAVASCRIPT and you are good to go.</p>
+			<a href="" class="hero-btn">visit us to know More</a>
+
+			
+		</div>
+		
+
+	</section>
+	<!------course------>
+	<section class="course">
+		<u><h1>COURSES WE OFFER</h1></u>
+		<P>We offer courses such as;</P>
+			<div class="row">
+			<div class="course-col">
+				<h3>DEGREE</h3>
+				<P>The degree programs offered by Ghana Communication Technology University (GCTU). These programs are designed to provide a deeper and more specialized education in technology and communication fields. Here's an overview of some of their degree programs:
+
+<br>General Features of GCTU Degree Programs<br>Duration: Typically, undergraduate degree programs last for four years, though this may vary based on the specific program and the student’s course load.<br>Entry Requirements: Generally, applicants need a senior high school diploma or its equivalent, with specific subject requirements depending on the program.<br>Course Structure: Degree programs often include a mix of theoretical coursework, practical labs, and project work. Many programs also offer opportunities for internships or industrial attachments to provide real-world experience.<br>Degree Programs at GCTU<br>Bachelor of Science in Computer Science<br>Bachelor of Science in Information Technology<br>Bachelor of Science in Cyber security<br>
+
+</P>
+			</div>
+						<div class="course-col">
+				<h3>DIPLOMA</h3>
+				<P>Ghana Communication Technology University (GCTU) offers diploma programs designed to provide foundational knowledge and practical skills in various technology and communication fields. Here’s a general overview of what you might expect from their diploma courses:<br>
+
+
+
+					General Features of GCTU Diploma Programs
+					Duration: Typically, diploma programs last for two years, though this can vary depending on the specific course and whether it is pursued on a full-time or part-time basis.
+					Entry Requirements: Admission requirements generally include a senior high school diploma or its equivalent. Specific requirements may vary depending on the program.
+					Diploma courses include;Diploma in Information Technology
+					<br>Diploma in Information System
+					<br>Diploma in Telecommunication Engneering
+
+
+
+
+
+
+</P>
+			</div>
+
+						<div class="course-col">
+				<h3>POST GRADUTE</h3>
+				<P>Certainly! Ghana Communication Technology University (GCTU) offers several postgraduate programs designed to provide advanced knowledge and skills in various technology and communication fields. Here's an overview of their postgraduate offerings:<br>General Features of GCTU Postgraduate Programs<br>Duration: Master’s programs typically last between one and two years, depending on whether they are pursued full-time or part-time. PhD programs usually require a minimum of three years.<br>Postgraduate Programs at GCTU<br>Master of Science in Communication Technology<br>Master of Science in Information Technology<br>Master of Science in Business Adminstration
+
+
+
+
+
+
+
+
+
+
+
+</P>
+			</div>
+		</div>
+	</section>
+	<!------campus------>
+	<section class="campus">
+		<u><h1>OUR CAMPUS ACROSS THE COUNTRY</h1></u>
+		<p>jnhhdhdjwejwsn</p>
+		<div class="row">
+			<div class="campus-col">
+				<img src="IMG-20240901-WA0028.jpg">
+				<div class="layer">
+					<h3>TAKORADI</h3>
+				</div>	
+				</div>
+				<div class="campus-col">
+				<img src ="IMG-20240901-WA0023.jpg">
+				<div class="layer">
+					<h3>KOFORIDUA</h3>
+				</div>
+			</div>
+			<div class="campus-col">
+			<img src="IMG-20240901-WA0031.jpg">
+			<div class="layer">
+				<h3>HO</h3>
+			</div>
+			
+		</div>
+		
+	</section>
+	<!------facilities----->
+
+	<section class="facilities">
+		<u><h1>OUR FACILITIES</h1></u>
+		<p>Ghana Communication Technolohy University include;</p>
+		<div class="row">
+		<div class="facilities-col">
+			<img src="IMG-20240901-WA0025.jpg">
+			<h3>GCTU SCHOOL LIBRARY</h3>
+
+		</div>
+		<div class="facilities-col">
+			<img src="IMG-20240901-WA0024.jpg">
+			<h3>GCTU SCHOOL BASKETBALL COURT</h3>
+	
+
+		</div>
+		<div class="facilities-col">
+			<img src="IMG-20240901-WA0029.jpg">
+			<h3>GCTU SCHOOL STADIUM</h3>
+
+
+		
+		</div>
+
+
+		</div>
+		
+	</section>
+	<!-----testimonials------>
+	<section class="testimonials">
+		<u><h1>WHAT OUR STUDENT SAYS</h1></u>
+		<p>Ghana Communication Technology University (GCTU) often shares testimonials from students and alumni to highlight their experiences and successes. While specific testimonials can vary, here are some examples of the types of feedback you might find from GCTU graduates:
+
+</p>
+		<div class="row">
+			<div class="testimonial-col">
+				<img src="IMG-20240901-WA0030.jpg">
+
+				<div>
+				<p>“Studying at GCTU was a transformative experience. The hands-on approach to learning and the practical projects gave me real-world experience that was invaluable. The faculty was supportive and always available to help. I’m now working as a software developer at a leading tech firm, and I owe a lot of my success to the solid foundation GCTU provided.”
+</p>
+				<h3>Emmanuel Marfo</h3>
+							
+
+
+
+			</div>
+
+			</div>
+			<div class="testimonial-col">
+				<img src="IMG-20240901-WA0022.jpg">
+				<div>
+					<p>“The Master’s program at GCTU equipped me with advanced knowledge in IT management and cybersecurity. The curriculum was rigorous and relevant, and the research opportunities allowed me to delve into cutting-edge topics. I’ve been able to leverage my education to advance my career in IT consulting, and I’m grateful for the comprehensive education I received.”
+</p>
+					<h3>Faustina Bortey</h3>
+
+				</div>
+			</div>
+				
+			</div>
+		</section>
+		<!------Call To Action------>
+		<section class="cta">
+			<h1>Enroll for our various online course<br>anywhere across the coutry</h1>
+			<a href="" class="hero-btn">CONTACT US</a> 
+			
+		</section>
+		<!------footer------->
+		<section class="footer">
+			<h4>About Us</h4>
+</p>			<p> We got you covered in every situation</p>
+
+			<div class="icons">
+			
+
+				
+			</div>
+
+
+			
+		</section>
+		<!-------script---->
+		<script >
+			var navLinks = document.getElementsById('navLinks');
+			function showMenu() {
+
+				navLinks.style.right ="0"
+			}
+			function hideMenu() {
+
+				navLinks.style.right ="-200px"
+			}
+		</script>
+
+
+</body>		
+	
+</html>
